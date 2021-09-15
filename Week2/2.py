@@ -1,12 +1,9 @@
-#    _~_
-#   (o o)
-#  /  V  \
-# /(  _  )\
-#   ^^ ^^
-
-n = int(input())
-print('   _~_    '*n, sep='')
-print('  (o o)   '*n, sep='')
-print(' /  V  \\  '*n, sep='')
-print('/(  _  )\\ '*n, sep='')
-print('  ^^ ^^   '*n, sep='')
+a = int(input())
+b = int(input())
+if a > b:
+    res = 1
+elif a < b:
+    res = 2
+else:
+    res = 0
+print(res)

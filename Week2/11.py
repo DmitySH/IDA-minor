@@ -1,3 +1,5 @@
 n = int(input())
-print('The next number for the number ', n, ' is ', n + 1, '.', sep = '')
-print('The previous number for the number ', n, ' is ', n - 1, '.', sep = '')
+i = 1
+while i * i <= n:
+    print(i * i)
+    i += 1
