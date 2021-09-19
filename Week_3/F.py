@@ -1,2 +1,7 @@
 n = int(input())
-print(n % 100 // 10)
+k = 0
+num = 1
+while num < n:
+    num *= 2
+    k += 1
+print(k)

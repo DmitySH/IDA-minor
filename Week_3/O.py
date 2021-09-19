@@ -1,4 +1,12 @@
-v = int(input())
-t = int(input())
-s = 109
-print((s + v*t) % 109)
+num = int(input())
+max = num
+k = 1
+while num != 0:
+    num = int(input())
+    if num != 0 and num == max:
+        k += 1
+    if num != 0 and num > max:
+        max = num
+        k = 1
+
+print(k)

@@ -1,12 +1,10 @@
-#    _~_
-#   (o o)
-#  /  V  \
-# /(  _  )\
-#   ^^ ^^
-
-n = int(input())
-print('   _~_    '*n, sep='')
-print('  (o o)   '*n, sep='')
-print(' /  V  \\  '*n, sep='')
-print('/(  _  )\\ '*n, sep='')
-print('  ^^ ^^   '*n, sep='')
+num = int(input())
+if num != 0 and num % 2 == 0:
+    i = 1
+else:
+    i = 0
+while num != 0:
+    num = int(input())
+    if num != 0 and num % 2 == 0:
+        i += 1
+print(i)

@@ -1,7 +1,7 @@
-a = int(input())
-b = int(input())
-c = int(input())
-d = int(input())
-e = int(input())
-f = int(input())
-print(d * 3600 + e * 60 + f - a * 3600 - b * 60 - c)
+n = int(input())
+#1234
+rev = 0
+while n != 0:
+    rev = rev * 10 + n % 10
+    n //= 10
+print(rev)

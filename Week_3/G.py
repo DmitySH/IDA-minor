@@ -1,2 +1,7 @@
-n = int(input())
-print(n % 10 + n // 100 + (n % 100) // 10)
+x, y = int(input()), int(input())
+
+day = 1
+while x < y:
+    x *= 1.1
+    day += 1
+print(day)

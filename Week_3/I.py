@@ -1,2 +1,6 @@
-n = int(input())
-print(n + ((n + 1) % 2) * 2 + (n % 2))
+num = int(input())
+summ = num
+while num != 0:
+    num = int(input())
+    summ += num
+print(summ)

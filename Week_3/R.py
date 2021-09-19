@@ -1,7 +1,9 @@
-a = int(input())
-b = int(input())
-n = int(input())
+a, b = int(input()), int(input())
 
-rub = (b * n + a * 100 * n) // 100
-cop = (b * n + a * 100 * n) % 100
-print(rub, cop)
+while a != b:
+    if a % 2 == 0 and a / 2 >= b:
+        print(':2')
+        a /= 2
+    else:
+        print(-1)
+        a -= 1

@@ -1,3 +1,5 @@
 n = int(input())
-k = int(input())
-print(k // n)
+i = 1
+while i * i <= n:
+    print(i * i)
+    i += 1
