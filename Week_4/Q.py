@@ -1,6 +1,8 @@
-s = input()
-pos1 = s.find('h')
-pos2 = s.rfind('h')
+def phib(n):
+    if n == 1 or n == 2:
+        return 1
+    return phib(n - 1) + phib(n - 2)
 
-s1 = s[:pos1] + s[pos1:pos2] + s[pos1 + 1:pos2 + 1] + s[pos2 + 1:]
-print(s1)
+
+a = int(input())
+print(phib(a))

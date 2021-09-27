@@ -1,11 +1,11 @@
-s = input()
+def power(a, n):
+    if n == 0:
+        return 1
+    if n == 1:
+        return a
+    else:
+        return a * power(a, n - 1)
 
-print(s[2])
-print(s[-2])
-print(s[:5])
-print(s[:-2])
-print(s[::2])
-print(s[1::2])
-print(s[::-1])
-print(s[::-2])
-print(len(s))
+
+a, n = float(input()), int(input())
+print(power(a, n))

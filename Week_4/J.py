@@ -1,10 +1,16 @@
-a, b, c, d, e, f = float(input()), float(input()), float(input()), \
-                   float(input()), float(input()), float(input())
-# x = (f - d * y) / c
+from math import sqrt
 
-det = a * d - c * b
-det_y = a * f - e * c
-det_x = e * d - f * b
-x = det_x / det
-y = det_y / det
-print(x, y)
+
+def IsPrime(n):
+    for i in range(2, int(sqrt(n)) + 1):
+        if n % i == 0:
+            return False
+    else:
+        return True
+
+
+n = int(input())
+if IsPrime(n):
+    print('YES')
+else:
+    print('NO')

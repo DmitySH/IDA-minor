@@ -1,6 +1,15 @@
-s = input()
-pos1 = s.find('h')
-pos2 = s.rfind('h')
+def gcd(a, b):
+    if a == 0:
+        return b
+    if b == 0:
+        return a
 
-s1 = s[pos1:pos2 + 1]
-print(s.replace(s1, ''))
+    if a > b:
+        a = a % b
+    else:
+        b = b % a
+    return gcd(a, b)
+
+
+a, b = int(input()), int(input())
+print(gcd(a, b))
