@@ -12,4 +12,4 @@ def cycle(had_sqr):
         return had_sqr
 
 if not cycle(False):
-    print(0, '')
+    print(0)
