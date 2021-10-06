@@ -1,9 +1,9 @@
-def sum():
-    n = int(input())
-    s = 0
-    while n != 0:
-        s += n
-        n = int(input())
-    return s
+a = list(map(int, input().split()))
 
-print(sum())
+k = 0
+for i in range(len(a)):
+    for j in range(i + 1, len(a)):
+        if a[i] == a[j]:
+            k += 1
+
+print(k)

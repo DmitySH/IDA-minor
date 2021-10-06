@@ -1,9 +1,8 @@
-def C(n, k):
-    if k == 0 or k == n:
-        return 1
+a = list(map(int, input().split()))
+k, x = map(int, input().split())
+a.append(0)
 
-    return C(n - 1, k - 1) + C(n - 1, k)
-
-
-n, k = int(input()), int(input())
-print(C(n, k))
+for i in range(len(a) - 1, k, -1):
+    a[i] = a[i - 1]
+a[k] = x
+print(*a)

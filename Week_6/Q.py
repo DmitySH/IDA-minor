@@ -1,8 +1,7 @@
-def phib(n):
-    if n == 1 or n == 2:
-        return 1
-    return phib(n - 1) + phib(n - 2)
+a = list(map(int, input().split()))
+k = int(input())
 
-
-a = int(input())
-print(phib(a))
+for i in range(k, len(a) - 1):
+    a[i] = a[i + 1]
+a.pop()
+print(*a)

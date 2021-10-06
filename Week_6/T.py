@@ -1,7 +1,6 @@
-def cycle(n):
-    if n != 0:
-        cycle(int(input()))
-    print(n)
+a = list(map(int, input().split()))
 
-
-cycle(int(input()))
+k = 0
+for i in range(len(a)):
+    if a.count(a[i]) == 1:
+        print(a[i])

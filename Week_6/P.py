@@ -1,21 +1,8 @@
-def gcd(a, b):
-    if a == 0:
-        return b
-    if b == 0:
-        return a
+a = list(map(int, input().split()))
+t1 = a.index(max(a))
+t2 = a.index(min(a))
+t3 = min(a)
+t4 = max(a)
 
-    if a > b:
-        a = a % b
-    else:
-        b = b % a
-    return gcd(a, b)
-
-
-def ReduceFraction(n, m):
-    k = gcd(n, m)
-    return (n // k, m // k)
-
-
-a, b = int(input()), int(input())
-res = ReduceFraction(a, b)
-print(res[0], res[1])
+a[t1], a[t2] = t3, t4
+print(*a)
