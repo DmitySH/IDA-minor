@@ -1,16 +1,9 @@
-from math import sqrt
+a = list(map(int, input().split()))
+p = int(input())
 
-
-def IsPrime(n):
-    for i in range(2, int(sqrt(n)) + 1):
-        if n % i == 0:
-            return False
-    else:
-        return True
-
-
-n = int(input())
-if IsPrime(n):
-    print('YES')
+for i in range(len(a)):
+    if p > a[i]:
+        print(i + 1)
+        break
 else:
-    print('NO')
+    print(len(a) + 1)

@@ -1,11 +1,9 @@
-def power(a, n):
-    if n == 0:
-        return 1
-    if n == 1:
-        return a
-    else:
-        return a * power(a, n - 1)
+a = list(map(int, input().split()))
+s = 1
+prev = a[0]
 
-
-a, n = float(input()), int(input())
-print(power(a, n))
+for x in a:
+    if x != prev:
+        prev = x
+        s += 1
+print(s)
