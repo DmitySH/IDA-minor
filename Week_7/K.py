@@ -1,9 +1,12 @@
-a = list(map(int, input().split()))
-s = 1
-prev = a[0]
+a = list()
 
-for x in a:
-    if x != prev:
-        prev = x
-        s += 1
-print(s)
+n = int(input())
+
+for i in range(n):
+    family, score = input().split()
+    a.append((family, int(score)))
+
+a.sort(key=lambda x: -x[1])
+
+for man in a:
+    print(man[0])

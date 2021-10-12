@@ -1,10 +1,16 @@
-a = list(map(int, input().split()))
+n = int(input())
 
-max_el = a[0]
-ind = 0
+max_use = list(map(int, input().split()))
 
-for i in range(1, len(a)):
-    if (a[i] > max_el):
-        max_el = a[i]
-        ind = i
-print(max_el, ind)
+j = int(input())
+
+pressed = list(map(int, input().split()))
+
+for x in pressed:
+    max_use[x - 1] -= 1
+
+for x in max_use:
+    if x >= 0:
+        print('NO')
+    else:
+        print('YES')
