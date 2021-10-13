@@ -19,7 +19,7 @@ for x in a[2::]:
     if min2[0] > x * max1:
         min2 = (x * max1, x, max1)
     if min2[0] > x * min1:
-        max2 = (x * min1, x, min1)
+        min2 = (x * min1, x, min1)
 
     if max2[0] < x * max1:
         max2 = (x * max1, x, max1)
@@ -30,3 +30,4 @@ for x in a[2::]:
     min1 = min(min1, x)
 
 print(max3[1], max3[2], max3[3])
+#-5 -4 1 2 3
