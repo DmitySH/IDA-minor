@@ -1,8 +1,12 @@
-a = list(map(int, input().split()))
-t1 = a.index(max(a))
-t2 = a.index(min(a))
-t3 = min(a)
-t4 = max(a)
+fin = open('input.txt', 'r', encoding='utf-8')
 
-a[t1], a[t2] = t3, t4
-print(*a)
+maxs = [[0, 0], [0, 0], [0, 0]]
+
+for line in fin:
+    sp_line = list(map(int, line.split()[2:]))
+
+    maxs[sp_line[0] - 9][0] += sp_line[1]
+    maxs[sp_line[0] - 9][1] += 1
+
+for x in maxs:
+    print(x[0] / x[1], end=' ')

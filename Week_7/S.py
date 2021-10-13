@@ -1,9 +1,11 @@
-a = list(map(int, input().split()))
+fin = open('input.txt', 'r', encoding='utf-8')
 
-k = 0
-for i in range(len(a)):
-    for j in range(i + 1, len(a)):
-        if a[i] == a[j]:
-            k += 1
+nums = [0] * 99
 
-print(k)
+for line in fin:
+    sp_line = list(map(int, line.split()[2:]))
+
+    nums[sp_line[0] - 1] += 1
+for i in range(99):
+    if nums[i] == max(nums):
+        print(i + 1, end=' ')
